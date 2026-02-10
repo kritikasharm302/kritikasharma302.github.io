@@ -1,14 +1,14 @@
 
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kritika | MCA Scholar & Developer</title>
     <style>
-        /* --- 1. CSS VARIABLES (THEME SYSTEM) --- */
+     
         :root {
-            /* Light Mode (Default) */
+         
             --bg-color: #f9f9f9;
             --nav-bg: rgba(255, 255, 255, 0.95);
             --card-bg: #ffffff;
@@ -22,7 +22,7 @@
             --input-bg: #fafafa;
         }
 
-        /* Dark Mode Overrides */
+     
         body.dark-mode {
             --bg-color: #121212;
             --nav-bg: rgba(18, 18, 18, 0.95);
@@ -37,7 +37,7 @@
             --input-bg: #2c2c2c;
         }
 
-        /* --- GLOBAL STYLES --- */
+      
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--bg-color);
@@ -52,7 +52,7 @@
         a { text-decoration: none; color: inherit; transition: 0.3s; }
         ul { list-style: none; padding: 0; }
 
-        /* --- NAVIGATION BAR --- */
+        
         nav {
             display: flex;
             justify-content: space-between;
@@ -101,7 +101,7 @@
             color: var(--primary-color);
         }
 
-        /* --- HERO SECTION --- */
+    
         .hero {
             display: flex;
             align-items: center;
@@ -119,8 +119,8 @@
         .btn-primary {
             display: inline-block;
             padding: 12px 30px;
-            background: var(--primary-color); /* Changes based on theme */
-            color: var(--bg-color); /* Inverts text color */
+            background: var(--primary-color); 
+            color: var(--bg-color); 
             border-radius: 30px;
             font-weight: 600;
         }
@@ -350,11 +350,11 @@
 
     <footer>
         <p>&copy; 2026 Kritika. All Rights Reserved.</p>
-        <p>Built with ❤️ and Clean Code.</p>
+        <p>Built with 🌸❤ and Clean Code.</p>
     </footer>
 
     <script>
-        // --- 1. ACCORDION LOGIC ---
+    
         const headers = document.querySelectorAll('.category-header');
 
         headers.forEach(header => {
@@ -371,14 +371,14 @@
             });
         });
 
-        // --- 2. DARK MODE LOGIC ---
+       
         const toggleBtn = document.getElementById('theme-toggle');
         const body = document.body;
 
-        // Check LocalStorage for saved preference
+        
         if (localStorage.getItem('theme') === 'dark') {
             body.classList.add('dark-mode');
-            toggleBtn.textContent = '☀️'; // Switch icon to Sun
+            toggleBtn.textContent = '☀️'; 
         }
 
         toggleBtn.addEventListener('click', () => {
