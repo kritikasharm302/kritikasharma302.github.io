@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kritika | MCA Scholar & Developer</title>
     <style>
-     
+   
         :root {
          
             --bg-color: #f9f9f9;
@@ -22,7 +22,7 @@
             --input-bg: #fafafa;
         }
 
-     
+
         body.dark-mode {
             --bg-color: #121212;
             --nav-bg: rgba(18, 18, 18, 0.95);
@@ -32,12 +32,12 @@
             --primary-color: #ffffff;
             --accent-bg: #2c2c2c;
             --border-color: #333;
-            --card-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Stronger shadow for dark mode */
+            --card-shadow: 0 10px 30px rgba(0,0,0,0.5); 
             --hover-shadow: 0 20px 40px rgba(0,0,0,0.7);
             --input-bg: #2c2c2c;
         }
 
-      
+   
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--bg-color);
@@ -52,7 +52,7 @@
         a { text-decoration: none; color: inherit; transition: 0.3s; }
         ul { list-style: none; padding: 0; }
 
-        
+     
         nav {
             display: flex;
             justify-content: space-between;
@@ -67,13 +67,24 @@
             transition: background 0.3s;
         }
 
-        .logo { font-size: 1.5rem; font-weight: 700; letter-spacing: -1px; color: var(--primary-color); }
+        .logo { font-size: 1.5rem; font-weight: 700; letter-spacing: -1px; color: var(--primary-color);
+  font-family: 'Fira Code', monospace;
+font-size:39px;
+   border-bottom:3px double gold;
+
+
+ }
+
         
-        .nav-actions { display: flex; align-items: center; gap: 30px; }
-        .nav-links { display: flex; gap: 20px; }
+        .nav-actions { 
+display: flex;
+ align-items: center; 
+gap: 30px; }
+        .nav-links { display: flex; 
+gap: 20px; 
+}
         .nav-links a:hover { color: var(--primary-color); border-bottom: 2px solid var(--primary-color); }
 
-        /* Theme Toggle Button */
         .btn-toggle {
             background: transparent;
             border: 2px solid var(--text-color);
@@ -86,7 +97,7 @@
         }
         .btn-toggle:hover { transform: scale(1.1); background: var(--accent-bg); }
 
-        /* --- SECTIONS --- */
+       
         section {
             padding: 80px 5%;
             max-width: 1200px;
@@ -101,7 +112,7 @@
             color: var(--primary-color);
         }
 
-    
+     
         .hero {
             display: flex;
             align-items: center;
@@ -129,14 +140,12 @@
         .hero-img { flex: 1; min-width: 300px; display: flex; justify-content: center; }
         .hero-img img {
             width: 100%; max-width: 400px; border-radius: 20px;
-           var(--card-shadow); transition: transform 0.5s;
+            box-shadow: var(--card-shadow); transition: transform 0.5s;
         }
-        .hero-img img:hover { transform: scale(1.02);
-           box-shadow:0px 0px 15px 3px rgba(255,255,255,0.7);
+        .hero-img img:hover { transform: scale(1.02); 
+box-shadow:0px 1px 5px 0px white;}
 
-}
-
-        /* --- SKILLS SECTION --- */
+    
         .skills-wrapper {
             max-width: 600px; margin: 0 auto;
             background: var(--card-bg);
@@ -161,7 +170,7 @@
         
         .active .icon { transform: rotate(180deg); }
 
-        /* --- PROJECTS SECTION --- */
+     
         .projects-grid {
             display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px; perspective: 1000px;
@@ -184,7 +193,6 @@
         .project-link { display: inline-block; margin-top: 15px; border-bottom: 2px solid var(--border-color); font-weight: 600; color: var(--text-color); }
         .project-link:hover { border-color: var(--primary-color); }
 
-        /* --- CONTACT SECTION --- */
         .contact-container { max-width: 500px; margin: 0 auto; perspective: 1000px; }
 
         .contact-card {
@@ -207,7 +215,6 @@
         }
         .btn-submit:hover { opacity: 0.9; transform: translateY(-2px); }
 
-        /* --- FOOTER --- */
         footer {
             text-align: center; padding: 40px; color: var(--text-secondary);
             font-size: 0.9rem; border-top: 1px solid var(--border-color); margin-top: 50px;
@@ -217,7 +224,7 @@
 <body>
 
     <nav>
-        <div class="logo">Kritika.</div>
+        <div class="logo">K</div>
         <div class="nav-actions">
             <div class="nav-links">
                 <a href="#about">About</a>
@@ -231,8 +238,8 @@
 
     <section id="about" class="hero">
         <div class="hero-text">
-            <h1>Hi, I'm Kritika.</h1>
-            <h2>MCA Scholar & Software Developer</h2>
+            <h1>Hi,👋</h1>
+            <h2>Software Developer</h2>
             <p>I build scalable software solutions using Java, C++, and Ruby. Passionate about Object-Oriented Programming, clean architecture, and turning complex logic into elegant code.</p>
             <a href="#contact" class="btn-primary">Get in Touch</a>
         </div>
@@ -349,12 +356,12 @@
     </section>
 
     <footer>
-        <p>&copy; 2026 Kritika. All Rights Reserved.</p>
-        <p>Built with 🌸❤ and Clean Code.</p>
+        <p>&copy; 2026 All Rights Reserved.</p>
+   
     </footer>
 
     <script>
-    
+      
         const headers = document.querySelectorAll('.category-header');
 
         headers.forEach(header => {
@@ -371,14 +378,14 @@
             });
         });
 
-       
+  
         const toggleBtn = document.getElementById('theme-toggle');
         const body = document.body;
 
-        
+        // Check LocalStorage for saved preference
         if (localStorage.getItem('theme') === 'dark') {
             body.classList.add('dark-mode');
-            toggleBtn.textContent = '☀️'; 
+            toggleBtn.textContent = '☀️'; // Switch icon to Sun
         }
 
         toggleBtn.addEventListener('click', () => {
@@ -395,3 +402,4 @@
         });
     </script>
 </body>
+</html>
