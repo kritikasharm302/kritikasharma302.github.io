@@ -67,7 +67,9 @@
             transition: background 0.3s;
         }
 
-        .logo { font-size: 1.5rem; font-weight: 700; letter-spacing: -1px; color: var(--primary-color);
+        .logo { font-size: 1.5rem; font-weight: 700;
+             letter-spacing: -1px; 
+            color: var(--primary-color);
   font-family: 'Fira Code', monospace;
 font-size:39px;
    border-bottom:3px double gold;
@@ -83,7 +85,9 @@ gap: 30px; }
         .nav-links { display: flex; 
 gap: 20px; 
 }
-        .nav-links a:hover { color: var(--primary-color); border-bottom: 2px solid var(--primary-color); }
+        .nav-links a:hover { color: var(--primary-color); 
+            border-bottom: 2px solid var(--primary-color);
+         }
 
         .btn-toggle {
             background: transparent;
@@ -122,10 +126,19 @@ gap: 20px;
             flex-wrap: wrap;
         }
 
-        .hero-text { flex: 1; min-width: 300px; }
-        .hero-text h1 { font-size: 3.5rem; margin-bottom: 10px; line-height: 1.1; }
-        .hero-text h2 { font-size: 1.5rem; color: var(--text-secondary); font-weight: 400; margin-bottom: 20px; }
-        .hero-text p { font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 30px; }
+        .hero-text { flex: 1;
+             min-width: 300px; }
+        .hero-text h1 { font-size: 3.5rem; 
+            margin-bottom: 10px;
+             line-height: 1.1; 
+            }
+        .hero-text h2 { font-size: 1.5rem; color: var(--text-secondary);
+             font-weight: 400;
+              margin-bottom: 20px; 
+            }
+        .hero-text p { font-size: 1.1rem; 
+            color: var(--text-secondary);
+             margin-bottom: 30px; }
 
         .btn-primary {
             display: inline-block;
@@ -135,15 +148,19 @@ gap: 20px;
             border-radius: 30px;
             font-weight: 600;
         }
-        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .btn-primary:hover { transform: translateY(-3px);
+             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+             }
 
-        .hero-img { flex: 1; min-width: 300px; display: flex; justify-content: center; }
+        .hero-img { flex: 1; min-width: 300px; 
+            display: flex; 
+            justify-content: center; }
         .hero-img img {
             width: 100%; max-width: 400px; border-radius: 20px;
             box-shadow: var(--card-shadow); transition: transform 0.5s;
         }
         .hero-img img:hover { transform: scale(1.02); 
-box-shadow:0px 1px 5px 0px white;}
+box-shadow:0px 1px 7px 0px white;}
 
     
         .skills-wrapper {
@@ -184,20 +201,31 @@ box-shadow:0px 1px 5px 0px white;}
             transform-style: preserve-3d; cursor: pointer;
         }
 
-        .project-card:hover { transform: translateY(-10px) rotateX(2deg); box-shadow: var(--hover-shadow); }
+        .project-card:hover { transform: translateY(-10px) rotateX(2deg); 
+            box-shadow: var(--hover-shadow); }
 
         .tech-tag {
             background: var(--accent-bg); padding: 5px 12px; border-radius: 20px;
-            font-size: 0.8rem; font-weight: 600; color: var(--text-secondary); display: inline-block; margin-bottom: 15px;
+            font-size: 0.8rem;
+             font-weight: 590; color: var(--text-secondary);
+              display: inline-block;
+               margin-bottom: 15px;
         }
-        .project-link { display: inline-block; margin-top: 15px; border-bottom: 2px solid var(--border-color); font-weight: 600; color: var(--text-color); }
+        .project-link { display: inline-block; margin-top: 15px; border-bottom: 2px solid var(--border-color); 
+        font-weight: 600; 
+
+        color: var(--text-color); }
         .project-link:hover { border-color: var(--primary-color); }
 
-        .contact-container { max-width: 500px; margin: 0 auto; perspective: 1000px; }
+        .contact-container { max-width: 500px; 
+            margin: 0 auto;
+             perspective: 1000px; }
 
         .contact-card {
-            background: var(--card-bg); padding: 40px; border-radius: 20px;
-            box-shadow: var(--card-shadow); transition: transform 0.4s ease, background 0.3s;
+            background: var(--card-bg); padding: 40px;
+             border-radius: 20px;
+            box-shadow: var(--card-shadow); 
+            transition: transform 0.4s ease, background 0.3s;
         }
         .contact-card:hover { transform: translateY(-5px) rotateX(1deg); }
 
@@ -207,7 +235,9 @@ box-shadow:0px 1px 5px 0px white;}
             background: var(--input-bg); color: var(--text-color); font-size: 1rem; box-sizing: border-box;
             transition: 0.3s;
         }
-        .form-control:focus { border-color: var(--primary-color); background: var(--card-bg); outline: none; }
+        .form-control:focus { border-color: var(--primary-color); 
+            background: var(--card-bg); 
+            outline: none; }
         
         .btn-submit {
             width: 100%; padding: 14px; background: var(--primary-color); color: var(--bg-color);
