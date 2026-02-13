@@ -262,7 +262,7 @@ box-shadow:0px 1px 7px 0px white;}
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
             </div>
-            <button id="theme-toggle" class="btn-toggle" title="Toggle Dark Mode">🌙</button>
+            <button id="toggleEmoji" class="btn-toggle" title="Toggle Dark Mode">🌙</button>
         </div>
     </nav>
 
@@ -391,45 +391,20 @@ box-shadow:0px 1px 7px 0px white;}
     </footer>
 
     <script>
-      
-        const headers = document.querySelectorAll('.category-header');
+         const emojiButton = document.getElementById('toggleEmoji');
+  let isHappy = true;
 
-        headers.forEach(header => {
-            header.addEventListener('click', () => {
-                const category = header.parentElement;
-                const body = category.querySelector('.category-body');
-                category.classList.toggle('active');
+  emojiButton.addEventListener('click', () => {
+    isHappy = !isHappy;
+    emojiButton.textContent = isHappy ? '🌙' : '🌞';
+  });
 
-                if (category.classList.contains('active')) {
-                    body.style.maxHeight = body.scrollHeight + "px";
-                } else {
-                    body.style.maxHeight = 0;
-                }
-            });
-        });
+  const modeButton = document.getElementById('toggleEmoji');
+  modeButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+  });
 
-  
-        const toggleBtn = document.getElementById('theme-toggle');
-        const body = document.body;
-
-        // Check LocalStorage for saved preference
-        if (localStorage.getItem('theme') === 'dark') {
-            body.classList.add('dark-mode');
-            toggleBtn.textContent = '☀️'; // Switch icon to Sun
-        }
-
-        toggleBtn.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-            
-            // Save preference & change icon
-            if (body.classList.contains('dark-mode')) {
-                toggleBtn.textContent = '☀️';
-                localStorage.setItem('theme', 'dark');
-            } else {
-                toggleBtn.textContent = '🌙';
-                localStorage.setItem('theme', 'light');
-            }
-        });
+        
     </script>
 </body>
 </html>
